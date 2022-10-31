@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import userEvent from "@testing-library/user-event"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const User = {
+name:"Hedy Lamarr",
+imageUrl:'https://i.imgur.com/uiytf34uy.jpg',
+imageSize: 90,
+
 }
 
-export default App;
+function Profile() {
+    return(
+        <>
+        <h1>{user.name}</h1>
+        <img
+src={user.imageUrl}
+alt={'photo of'+user.name}
+style = {{
+    width: user.imageSize,
+    height: user.imageSize,
+}}
+/>
+</>
+    )
+}
+function myButton() {
+return (
+    <button>
+        I'm a button
+    </button>
+)
+}
+export default function myApp(){
+    return (
+        <div>
+            <h1>Welcome to my App </h1>
+            <Button />
+            <Profile />
+        </div>
+    )
+}
